@@ -31,11 +31,12 @@ fn prompt_for_bound(is_left: bool) -> usize {
 
 fn brute_force_rmq(array: [i32; 9], left_bound: usize, right_bound: usize) -> i32 {
 	let mut minimum = array[left_bound];
+	
 	for i in left_bound+1..right_bound+1 {
         if array[i] < minimum {
 	        minimum = array[i];
 		}
 	}
-	
+
 	minimum
 }
