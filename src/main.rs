@@ -12,11 +12,11 @@ fn main() {
 }
 
 fn prompt_for_bound(is_left: bool) -> usize {
-	if is_left {
+    if is_left {
         println!("Enter the left bound.");
-	} else {
+    } else {
         println!("Enter the right bound.");
-	}
+    }
 
     let mut bound = String::new();
 
@@ -30,13 +30,13 @@ fn prompt_for_bound(is_left: bool) -> usize {
 }
 
 fn brute_force_rmq(array: [i32; 9], left_bound: usize, right_bound: usize) -> i32 {
-	let mut minimum = array[left_bound];
-	
-	for i in left_bound+1..right_bound+1 {
-        if array[i] < minimum {
-	        minimum = array[i];
-		}
-	}
+    let mut minimum = array[left_bound];
 
-	minimum
+    for i in left_bound+1..right_bound+1 {
+        if array[i] < minimum {
+            minimum = array[i];
+        }
+    }
+
+    minimum
 }
